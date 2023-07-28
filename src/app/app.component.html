@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="full-search">
+    <div class="search-input">
+      <label for="">Search here: </label> <input [(ngModel)]="searchText" type="search">
+     </div>
+
+     <div class="text-contaniner" [innerHtml]="text | highlighter:searchText:'full'"  >
+
+
+     </div>
+  </div>
+  <div class="partial-search">
+    <div class="search-input">
+      <label for="">Search here: </label> <input [(ngModel)]="searchText1" type="search">
+     </div>
+
+     <div class="text-contaniner" [innerHtml]="text | highlighter:searchText1:'partial'"  >
+
+
+     </div>
+  </div>
+</div>
+
+

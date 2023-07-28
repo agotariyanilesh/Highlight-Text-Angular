@@ -10,7 +10,7 @@ export class HighlighterPipe implements PipeTransform {
       const re = new RegExp('\\b(?<!<)(' + args + ')(?!>)\\b', 'igm');
       value = value.replace(re, '<span class="highlighted-text">$1</span>');
     } else {
-      const re = new RegExp(args, 'igm');
+      const re = new RegExp('(?<!<)' + args + '(?!>)', 'igm');
       value = value.replace(re, '<span class="highlighted-text">$&</span>');
     }
 
